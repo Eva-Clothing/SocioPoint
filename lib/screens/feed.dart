@@ -1,5 +1,5 @@
 import 'package:socioPoints/helper/dimensions.dart';
-import 'package:socioPoints/screens/home.dart';
+import 'package:socioPoints/screens/login.dart';
 import 'package:socioPoints/screens/profile.dart';
 import 'package:socioPoints/widgets/feed_card.dart';
 import 'package:flutter/material.dart';
@@ -36,8 +36,8 @@ class _FeedPageState extends State<FeedPage> {
     return SafeArea(
       child:Scaffold(
       appBar: AppBar(
-        elevation: 1,
-        backgroundColor: Colors.white,
+        // elevation: 1,
+        backgroundColor: Colors.teal[900],
         leading: Container(
           margin: EdgeInsets.all(10.0),
           child: GestureDetector(
@@ -46,25 +46,40 @@ class _FeedPageState extends State<FeedPage> {
               context,
               MaterialPageRoute(builder: (context) => ProfileScreen()));
             },
-            child:CircleAvatar(
+            
+              child: CircleAvatar(
+                 radius: 0,
               backgroundImage:AssetImage('assets/images/dp.jpeg'),
-            ),
+            )
             
           ),
         ),
         title: Text(
           'Home',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
+            fontSize: vpH*0.03,
             fontWeight:FontWeight.bold,
           ),
         ),
+         actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.logout,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context, MaterialPageRoute(builder: (_) => LoginDemo()));
+            },
+          )
+        ],
       ),
       body: SingleChildScrollView(
-         physics: BouncingScrollPhysics(),
+        physics: BouncingScrollPhysics(),
         child: Container(
-                width: vpW,
-                child: true
+          width: vpW,
+          child: true
                     ? ListView.builder(
                         physics: BouncingScrollPhysics(),
                         shrinkWrap: true,
@@ -87,29 +102,25 @@ class _FeedPageState extends State<FeedPage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-           buildBottomIconButton(Icons.home, Colors.green),
-            buildBottomIconButton(Icons.search, Colors.black45),
-            buildBottomIconButton(Icons.notifications, Colors.black45),
+           buildBottomIconButton(Icons.home, Colors.teal[900]),
+            buildBottomIconButton(Icons.search, Colors.teal[900]),
+            buildBottomIconButton(Icons.notifications, Colors.teal[900]),
            IconButton(
             icon:Icon(
-              Icons.login,
+              Icons.logout,
               color: Colors.black,
             ),
-            onPressed: () { Navigator.push(
-                  context,MaterialPageRoute(builder: (context) => HomePage()));
-            },
+            onPressed: () {},
           ),
                
-           
-         
           ],
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
         // isExtended: true,
-        child: Icon(Icons.add),
-        backgroundColor: Colors.green,
+        child: Icon(Icons.add,color: Colors.white,),
+        backgroundColor: Colors.teal[300],
         onPressed: () {},
       ),
       

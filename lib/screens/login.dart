@@ -1,7 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:socioPoints/helper/dimensions.dart';
 import 'package:socioPoints/screens/feed.dart';
 import 'package:socioPoints/screens/register.dart';
-import 'package:flutter/material.dart';
 
 
 class LoginDemo extends StatefulWidget {
@@ -16,14 +16,17 @@ class _LoginDemoState extends State<LoginDemo> {
     var vpH = getViewportHeight(context);
     var vpW = getViewportWidth(context);
     
-    return Scaffold(
-      backgroundColor: Colors.white,
+    return SafeArea(
+      child:Scaffold(
+      backgroundColor: Colors.teal[50],
       appBar: AppBar(
-        backgroundColor: Colors.blue[100],
-        title: Text("Login Page"),
+        
+        backgroundColor: Colors.teal[700],
+        title: Text("Login Page",style: TextStyle(color: Colors.white),),
       ),
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(top: 60.0),
@@ -32,12 +35,11 @@ class _LoginDemoState extends State<LoginDemo> {
                     width: 200,
                     height: 150,
                    
-                    child: Image.asset('asset/images/flutter-logo.png')),
+                    child: Image.asset('assets/images/2.png')),
               ),
             ),
             Padding(
-              //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: EdgeInsets.symmetric(horizontal: vpW*0.015),
               child: TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -48,7 +50,7 @@ class _LoginDemoState extends State<LoginDemo> {
             Padding(
               padding: const EdgeInsets.only(
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
-              //padding: EdgeInsets.symmetric(horizontal: 15),
+            
               child: TextField(
 
                 obscureText: true,
@@ -58,20 +60,13 @@ class _LoginDemoState extends State<LoginDemo> {
                     hintText: 'Enter secure password'),
               ),
             ),
-            FlatButton(
-              onPressed: (){
-                //TODO FORGOT PASSWORD SCREEN GOES HERE
-              },
-              child: Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
-              ),
-            ),
-            Container(
+             Padding(
+              padding:  EdgeInsets.symmetric(horizontal: vpW*0.015,vertical: vpH*0.02),
+            child:Container(
               height: 50,
               width: 250,
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+                  color: Colors.teal[300], borderRadius: BorderRadius.circular(20)),
               child: FlatButton(
                 onPressed: () {
                   Navigator.push(
@@ -82,18 +77,33 @@ class _LoginDemoState extends State<LoginDemo> {
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
-            ),
+            ),),
             SizedBox(
               height: 130,
             ),
-            GestureDetector(child:  Text('New User? Create Account', style: TextStyle(color: Colors.black, fontSize: vpH*0.025),),onTap:() {
-               Navigator.push(
+            Row(
+               mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('New User? ',style: TextStyle(color: Colors.black, fontSize: vpH*0.025),),
+                  GestureDetector(
+                    child:Text('Create Account', 
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: vpH*0.026,
+                        fontWeight:FontWeight.bold,
+                      ),
+                    ),
+                  onTap:() {
+                    Navigator.push(
                       context, MaterialPageRoute(builder: (_) => SignUp()));
-            },)
-           
+                  },
+                ),
+              ],
+            ),
           ],
         ),
       ),
-    );
+    ),
+  );
   }
 }

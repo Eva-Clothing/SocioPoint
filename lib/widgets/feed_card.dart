@@ -50,6 +50,39 @@ class FeedCards extends StatelessWidget {
                     ),
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: vpH * 0.006,
+                                      horizontal: vpW * 0.02),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: IconButton(
+                                      icon: Icon(Icons.thumb_up),
+                                      iconSize: vpW * 0.080,
+                                      color: Colors.teal[200],
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: vpH * 0.006,
+                                      horizontal: vpW * 0.02),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: IconButton(
+                                      icon: Icon(Icons.comment),
+                                      iconSize: vpW * 0.080,
+                                      color: Colors.teal[200],
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                ),
+
+                ],)
                
               ],
             ),

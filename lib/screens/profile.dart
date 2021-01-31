@@ -160,7 +160,7 @@ bool _postsPressed = false;
                                     child: IconButton(
                                       icon: Icon(Icons.emoji_emotions),
                                       iconSize: vpW * 0.080,
-                                      color: Color(0xFF3B5998),
+                                      color: Colors.yellow,
                                       onPressed: () {},
                                     ),
                                   ),
@@ -174,7 +174,7 @@ bool _postsPressed = false;
                                     child: IconButton(
                                       icon: Icon(Icons.emoji_emotions),
                                       iconSize: vpW * 0.080,
-                                      color: Color(0xFF3B5998),
+                                      color: Colors.orange,
                                       onPressed: () {},
                                     ),
                                   ),
@@ -188,9 +188,42 @@ bool _postsPressed = false;
                                     child: IconButton(
                                       icon: Icon(Icons.emoji_emotions),
                                       iconSize: vpW * 0.080,
-                                      color: Color(0xFF3B5998),
+                                      color: Colors.orange[200],
                                       onPressed: () {},
                                     ),
+                                  ),
+                                ),
+                             
+                              ],
+                            ),
+                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: vpH * 0.006,
+                                      horizontal: vpW * 0.02),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child:  Text('Support'),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: vpH * 0.006,
+                                      horizontal: vpW * 0.02),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text('Empathy'),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: vpH * 0.006,
+                                      horizontal: vpW * 0.02),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text('Gratitude'),
                                   ),
                                 ),
                              

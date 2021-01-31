@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "699816726639",
+    "project_id": "sociopoints-c0c03",
+    "storage_bucket": "sociopoints-c0c03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699816726639:android:6a1efc2be537c68256bd9a",
+        "android_client_info": {
+          "package_name": "com.example.socioPoints"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699816726639-8pgals92mu5a2pi9b0887ssc08u54imd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCplXylwP5ysS6vdPjv50glfkmXFzUtQCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699816726639-8pgals92mu5a2pi9b0887ssc08u54imd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

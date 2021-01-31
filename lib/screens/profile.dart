@@ -252,7 +252,7 @@ bool _postsPressed = false;
                         textColor:
                             !_postsPressed ? Colors.white : Colors.black,
                         color: !_postsPressed
-                            ? Theme.of(context).primaryColor
+                            ? Colors.teal[300]
                             : Colors.white,
                         onPressed: () => {
                           setState(() {
@@ -266,7 +266,7 @@ bool _postsPressed = false;
                         textColor:
                             _postsPressed ? Colors.white : Colors.black,
                         color: _postsPressed
-                            ? Theme.of(context).primaryColor
+                            ? Colors.teal[300]
                             : Colors.white,
                         onPressed: () => {
                           setState(() {
